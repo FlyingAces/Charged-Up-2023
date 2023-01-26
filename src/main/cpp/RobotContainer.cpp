@@ -6,14 +6,18 @@
 
 RobotContainer* RobotContainer::mp_RobotContainer = NULL;
 RobotContainer::RobotContainer() {
-  // Initialize all of your commands and subsystems here
-
+  // Set drive with controller to run as default
+  m_DriveTrain.SetDefaultCommand(std::move(m_DriveWithController));
+  // Set auto state to false
+  m_DriveTrain.setAutoState(false);
   // Configure the button bindings
   ConfigureButtonBindings();
 }
 
 void RobotContainer::ConfigureButtonBindings() {
   // Configure your button bindings here
+
+  m_DriverButtonY.WhenPressed(m_ToggleDriveMode);
 }
 
 frc2::Command* RobotContainer::GetAutonomousCommand() {

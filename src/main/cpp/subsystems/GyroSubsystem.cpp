@@ -1,5 +1,7 @@
 #include "subsystems/GyroSubsystem.h"
 
+#include <iostream>
+
 GyroSubsystem::GyroSubsystem() = default;
 
 void GyroSubsystem::zeroGyro(){
@@ -14,4 +16,6 @@ double GyroSubsystem::getPitch() {
     return m_Gyro.GetPitch();
 }
 
-void GyroSubsystem::Periodic() {}
+void GyroSubsystem::Periodic() {
+    std::cout << "Pitch: " << GyroSubsystem::getPitch();
+}

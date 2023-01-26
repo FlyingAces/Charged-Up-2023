@@ -19,6 +19,7 @@
 #include "subsystems/LimeLightSubsystem.h"
 
 #include "commands/DriveCommands/DriveWithController.h"
+#include "commands/ToggleCommands/ToggleDriveMode.h"
 
 /**
  * This class is where the bulk of the robot should be declared.  Since
@@ -55,4 +56,5 @@ class RobotContainer {
 
   // Create Commands
   DriveWithController m_DriveWithController{&m_DriveTrain};
+  ToggleDriveMode m_ToggleDriveMode{&m_DriveTrain};
 };
