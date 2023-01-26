@@ -18,6 +18,8 @@
 #include "subsystems/GyroSubsystem.h"
 #include "subsystems/LimeLightSubsystem.h"
 
+#include "commands/DriveCommands/DriveWithController.h"
+
 /**
  * This class is where the bulk of the robot should be declared.  Since
  * Command-based is a "declarative" paradigm, very little robot logic should
@@ -50,4 +52,7 @@ class RobotContainer {
   DriveTrainSubsystem m_DriveTrain{&m_DriverController};
   GyroSubsystem m_Gyro;
   LimeLightSubsystem m_LimeLight;
+
+  // Create Commands
+  DriveWithController m_DriveWithController{&m_DriveTrain};
 };
