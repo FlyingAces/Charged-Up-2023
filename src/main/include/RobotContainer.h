@@ -18,6 +18,7 @@
 #include "subsystems/GyroSubsystem.h"
 #include "subsystems/LimeLightSubsystem.h"
 
+#include "commands/DriveCommands/AutoLevel.h"
 #include "commands/DriveCommands/DriveWithController.h"
 #include "commands/ToggleCommands/ToggleDriveMode.h"
 
@@ -55,6 +56,7 @@ class RobotContainer {
   LimeLightSubsystem m_LimeLight;
 
   // Create Commands
+  AutoLevel m_AutoLevel{&m_DriveTrain, &m_Gyro};
   DriveWithController m_DriveWithController{&m_DriveTrain};
   ToggleDriveMode m_ToggleDriveMode{&m_DriveTrain};
 };

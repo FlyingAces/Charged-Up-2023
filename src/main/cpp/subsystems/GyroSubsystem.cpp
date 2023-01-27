@@ -16,6 +16,4 @@ double GyroSubsystem::getPitch() {
     return m_Gyro.GetPitch();
 }
 
-void GyroSubsystem::Periodic() {
-    std::cout << "Pitch: " << GyroSubsystem::getPitch();
-}
+void GyroSubsystem::Periodic() {}

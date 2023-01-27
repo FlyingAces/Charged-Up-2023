@@ -21,7 +21,7 @@ RobotContainer::RobotContainer() {
 void RobotContainer::ConfigureButtonBindings() {
   // Configure your button bindings here
 
-  m_DriverButtonY.WhenPressed(m_ToggleDriveMode);
+  m_DriverButtonY.WhileHeld(m_AutoLevel);
 }
 
 frc2::Command* RobotContainer::GetAutonomousCommand() {
