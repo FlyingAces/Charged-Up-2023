@@ -10,6 +10,10 @@ RobotContainer::RobotContainer() {
   m_DriveTrain.SetDefaultCommand(std::move(m_DriveWithController));
   // Set auto state to false
   m_DriveTrain.setAutoState(false);
+
+  //Zero Gyro
+  m_Gyro.zeroGyro();
+
   // Configure the button bindings
   ConfigureButtonBindings();
 }
