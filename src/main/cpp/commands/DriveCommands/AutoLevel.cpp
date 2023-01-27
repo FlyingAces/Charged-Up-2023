@@ -17,9 +17,9 @@ void AutoLevel::Execute() {
     balanceError = mp_Gyro->getPitch();
 
     if (balanceError > 1.0) {
-        balanceSpeed = CONSTP*balanceError + minCommand;
+        balanceSpeed = -CONSTP*balanceError - minCommand;
     } else if (balanceError < -1.0) {
-        balanceSpeed = CONSTP*balanceError - minCommand;
+        balanceSpeed = -CONSTP*balanceError + minCommand;
     } else {
         balanceSpeed = 0;
     }
