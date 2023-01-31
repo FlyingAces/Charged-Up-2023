@@ -6,10 +6,10 @@
 #include "subsystems/DriveTrainSubsystem.h"
 
 // Uses PID controlls to drive in a straight line for a given distance in meters
-class DriveDistPID: public frc2::CommandHelper<frc2::ProfiledPIDCommand<units::meters>, DriveDistPID> {
+class DriveStraightPID: public frc2::CommandHelper<frc2::ProfiledPIDCommand<units::meters>, DriveStraightPID> {
  
  public:
-  DriveDistPID(DriveTrainSubsystem* p_drive, units::meter_t);
+  DriveStraightPID(DriveTrainSubsystem* p_drive, units::meter_t);
 
   void Initialize() override;
   bool IsFinished() override;
