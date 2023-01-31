@@ -5,6 +5,8 @@
 
 #include "subsystems/DriveTrainSubsystem.h"
 
+// Toggles Auto Mode
+// While Auto Mode is on, inputs from the controller will not effect the drivetrain
 class ToggleAutoMode : public frc2::CommandHelper<frc2::CommandBase, ToggleAutoMode> {
     public:
     explicit ToggleAutoMode(DriveTrainSubsystem* p_DriveTrain);

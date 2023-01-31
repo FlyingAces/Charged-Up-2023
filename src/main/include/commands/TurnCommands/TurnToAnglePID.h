@@ -6,6 +6,7 @@
 #include "subsystems/DriveTrainSubsystem.h"
 #include "subsystems/GyroSubsystem.h"
 
+// Uses PID controll to turn to a requested angle in degrees
 class TurnToAnglePID: public frc2::CommandHelper<frc2::ProfiledPIDCommand<units::radians>, TurnToAnglePID> {
  
  public:

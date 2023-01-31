@@ -5,6 +5,8 @@
 
 #include "subsystems/DriveTrainSubsystem.h"
 
+// Toggles Drive Mode
+// Drive mode constrains the max speeds that can be inputed through the controller
 class ToggleDriveMode : public frc2::CommandHelper<frc2::CommandBase, ToggleDriveMode> {
     public:
     explicit ToggleDriveMode(DriveTrainSubsystem* p_DriveTrain);

@@ -9,6 +9,7 @@
 
 #include "subsystems/DriveTrainSubsystem.h"
 
+// Uses inputs from controller to control the drivetrain
 class DriveWithController
     : public frc2::CommandHelper<frc2::CommandBase, DriveWithController> {
  public:
