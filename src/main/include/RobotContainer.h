@@ -46,6 +46,8 @@ class RobotContainer {
   RobotContainer();
 
   void ConfigureButtonBindings();
+  // Choose Auto
+  frc::SendableChooser<frc2::Command*> m_AutoMode;
 
   // Create controller and button objects
   frc::XboxController m_DriverController{0};
