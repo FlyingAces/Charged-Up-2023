@@ -16,8 +16,6 @@ RobotContainer::RobotContainer() {
 
   // Configure the button bindings
   ConfigureButtonBindings();
-
-   // Auto
 }
 
 void RobotContainer::ConfigureButtonBindings() {
