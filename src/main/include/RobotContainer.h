@@ -22,6 +22,7 @@
 #include "commands/DriveCommands/DriveWithController.h"
 #include "commands/ToggleCommands/ToggleDriveMode.h"
 #include "commands/AimingCommands/VisionAim.h"
+#include "commands/AutoCommands/MainAuto.h"
 
 /**
  * This class is where the bulk of the robot should be declared.  Since
@@ -45,6 +46,9 @@ class RobotContainer {
   RobotContainer();
 
   void ConfigureButtonBindings();
+
+  // Choose Auto
+  frc::SendableChooser<frc2::Command*> m_AutoMode;
 
   // Create controller and button objects
   frc::XboxController m_DriverController{0};

@@ -23,6 +23,6 @@ class AutoLevel : public frc2::CommandHelper<frc2::CommandBase, AutoLevel> {
     GyroSubsystem* mp_Gyro;
     double balanceError;
     double balanceSpeed;
-    double CONSTP = 0.004;
-    double minCommand = 0.08;
+    double CONSTP = 0.01;
+    double minCommand = 0.06;
 };
