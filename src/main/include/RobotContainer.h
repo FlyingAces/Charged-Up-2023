@@ -64,4 +64,7 @@ class RobotContainer {
   DriveWithController m_DriveWithController{&m_DriveTrain};
   ToggleDriveMode m_ToggleDriveMode{&m_DriveTrain};
   VisionAim m_VisionAim{&m_DriveTrain, &m_LimeLight};
+
+  // Drive Straight test when button pressed
+  DriveStraightPID m_DriveStraightWhenPress{&m_DriveTrain, 1_m};
 };
