@@ -26,8 +26,6 @@ RobotContainer::RobotContainer() {
 
 void RobotContainer::ConfigureButtonBindings() {
   // Configure your button bindings here
-
-  m_DriverButtonY.WhenHeld(m_AutoLevel);
   m_DriverButtonA.WhenHeld(m_VisionAim);
 }
 
