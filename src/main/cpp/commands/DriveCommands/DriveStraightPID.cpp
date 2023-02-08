@@ -27,6 +27,3 @@ void DriveStraightPID::Initialize() {
 bool DriveStraightPID::IsFinished() {
   return GetController().AtGoal();
 }
-void DriveStraightPID::End(bool interupted) {
-  std::cout << "end" << std::endl;
-}
