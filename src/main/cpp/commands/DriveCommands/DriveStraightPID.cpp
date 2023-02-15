@@ -11,7 +11,7 @@ DriveStraightPID::DriveStraightPID(DriveTrainSubsystem* mp_drive, units::meter_t
           [mp_drive] { return ((mp_drive->getRightDist()+mp_drive->getLeftDist())/2); },
           // Set reference to target
           target,
-          // Pipe output to turn robot
+          // Pipe output to drive robot
           [mp_drive](double output, auto setpointState) {
             mp_drive->arcadeDrive(output, 0);
           },
