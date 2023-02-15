@@ -22,7 +22,7 @@ void RobotContainer::ConfigureButtonBindings() {
   // Configure your button bindings here
 
   m_DriverButtonY.WhenHeld(m_AutoLevel);
-  m_DriverButtonA.WhenHeld(m_VisionAim);
+  m_DriverButtonA.WhenHeld(DriveStraightPID(&m_DriveTrain, 1_m));
 }
 
 frc2::Command* RobotContainer::GetAutonomousCommand() {
