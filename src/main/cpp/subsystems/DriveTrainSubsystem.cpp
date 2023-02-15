@@ -61,10 +61,12 @@ double DriveTrainSubsystem::getAvgEncoderPosition(){
   return (m_LeftLeader.GetSelectedSensorPosition(0) + m_RightLeader.GetSelectedSensorPosition(0)) / 2;
 }
 
+
+// NOT WORK
 void DriveTrainSubsystem::zeroDTEncoders(){
 
-  m_LeftLeader.SetSelectedSensorPosition(0.0);
-  m_RightLeader.SetSelectedSensorPosition(0.0);
+  m_LeftLeader.SetSelectedSensorPosition(0);
+  m_RightLeader.SetSelectedSensorPosition(0);
 }
 
 void DriveTrainSubsystem::toggleDriveMode(){
